@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataBase
+namespace Objects
 {
-    public class Class1
+    public class CsCollectionFuncionario : List<CsFuncionario>
     {
     }
 }
