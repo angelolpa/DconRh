@@ -17,6 +17,14 @@ namespace DataBase
         private OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter();
         private OleDbDataReader oleDbDataReader;
         private DataTable dataTable = new DataTable();
+        public void ParameterCollection_Clear()
+        {
+            oleDbParameterCollection.Clear();
+        }
+        public void ParameterCollection_Add(string nameParameter, object valueParameter)
+        {
+            oleDbParameterCollection.Add(new OleDbParameter(nameParameter, valueParameter));
+        }
 
         #region Operations CsDataBase
         public object ExecuteCommandNonQuery(CommandType commandType, string command)
