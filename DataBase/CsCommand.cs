@@ -25,11 +25,11 @@ namespace DataBase
             {
                 csConnection.OpenConnection();
 
-                // Creates and defines OleDbCommad
+                // Cria o objeto
                 OleDbCommand oleDbCommand = csConnection.GetOleDbConnection().CreateCommand();
                 oleDbCommand.CommandType = commandType;
                 oleDbCommand.CommandText = command;
-                // Add parameter in parameter Collection
+                // Adiciona parametros
                 foreach (OleDbParameter OleDbParameter in oleDbParameterCollection)
                 {
                     oleDbCommand.Parameters.Add(new OleDbParameter(OleDbParameter.ParameterName, OleDbParameter.Value));
@@ -52,21 +52,21 @@ namespace DataBase
             try
             {
                 csConnection.OpenConnection();
-                // Creates and defines OleDbCommad   
+                // Cria o objeto 
                 OleDbCommand oleDbCommand = csConnection.GetOleDbConnection().CreateCommand();
                 oleDbCommand.CommandType = commandType;
                 oleDbCommand.CommandText = command;
-                // Add parameter in parameter Collection
+                // Adiciona parametros
                 foreach (OleDbParameter oleDbParameter in oleDbParameterCollection)
                 {
                     oleDbCommand.Parameters.Add(new OleDbParameter(oleDbParameter.ParameterName, oleDbParameter.Value));
                 }
-                //Create objetc's
+
                 oleDbDataAdapter = new OleDbDataAdapter(oleDbCommand);
                 dataTable = new DataTable();
-                //
+                // Preenche a Tabela de dados
                 oleDbDataAdapter.Fill(dataTable);
-                //
+
                 return dataTable;
             }
             catch (Exception Er404)
@@ -86,18 +86,17 @@ namespace DataBase
             try
             {
                 csConnection.OpenConnection();
-                // Creates and defines OleDbCommad
+                // Cria o objeto 
                 OleDbCommand oleDbCommand = csConnection.GetOleDbConnection().CreateCommand();
                 oleDbCommand.CommandType = commandType;
                 oleDbCommand.CommandText = command;
-                // Add parameter in parameter Collection
+                // Adiciona parametros
                 foreach (OleDbParameter oleDbParameter in oleDbParameterCollection)
                 {
                     oleDbCommand.Parameters.Add(new OleDbParameter(oleDbParameter.ParameterName, oleDbParameter.Value));
                 }
-                //Create objetc's
                 oleDbDataReader = oleDbCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                //
+
                 return oleDbDataReader;
             }
             catch (Exception Er404)

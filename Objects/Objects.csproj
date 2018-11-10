@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CsCollectionFuncionario.cs" />
+    <Compile Include="CsEmpresa.cs" />
     <Compile Include="CsFuncionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
