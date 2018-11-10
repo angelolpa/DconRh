@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CsCollectionEmpresa.cs" />
     <Compile Include="CsCollectionFuncionario.cs" />
     <Compile Include="CsEmpresa.cs" />
     <Compile Include="CsFuncionario.cs" />

@@ -2,7 +2,7 @@
 
 namespace Objects
 {
-    public class CsCollectionFuncionario : List<CsFuncionario>
+    public class CsCollectionEmpresa : List<CsEmpresa>
     {
     }
 }
