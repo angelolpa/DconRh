@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="CsCollectionEmpresa.cs" />
     <Compile Include="CsCollectionFuncionario.cs" />
+    <Compile Include="CsCollectionPrestaServico.cs" />
     <Compile Include="CsEmpresa.cs" />
     <Compile Include="CsFuncionario.cs" />
+    <Compile Include="CsPrestaServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
