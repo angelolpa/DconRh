@@ -6,8 +6,8 @@ namespace Objects
     {
         #region Atributos
         private int id;
-        private int fkEmpresa;
-        private int fkFuncionario;
+        private CsEmpresa fkEmpresa;
+        private CsFuncionario fkFuncionario;
         private DateTime dataRegistro;
         private DateTime entrada;
         private DateTime intervalo;
@@ -15,10 +15,12 @@ namespace Objects
         private DateTime horasTrabalhadas;
         private DateTime horasExtras;
         private DateTime totalHoras;
+        #endregion
 
+        #region Propriedades
         public int Id { get => id; set => id = value; }
-        public int FkEmpresa { get => fkEmpresa; set => fkEmpresa = value; }
-        public int FkFuncionario { get => fkFuncionario; set => fkFuncionario = value; }
+        public CsEmpresa FkEmpresa { get => fkEmpresa; set => fkEmpresa = value; }
+        public CsFuncionario FkFuncionario { get => fkFuncionario; set => fkFuncionario = value; }
         public DateTime DataRegistro { get => dataRegistro; set => dataRegistro = value; }
         public DateTime Entrada { get => entrada; set => entrada = value; }
         public DateTime Intervalo { get => intervalo; set => intervalo = value; }
@@ -34,8 +36,8 @@ namespace Objects
             CsPrestaServico csPrestaServico = new CsPrestaServico
             {
                 Id = Convert.ToInt32(line["id"]),
-                FkEmpresa = Convert.ToInt32(line["fk_empresa"]),
-                FkFuncionario = Convert.ToInt32(line["fk_funcionario"]),
+                FkEmpresa = ((line["fk_empresa"]) as CsEmpresa),
+                FkFuncionario = ((line["fk_funcionario"]) as CsFuncionario),
                 DataRegistro = Convert.ToDateTime(line["data_registro"]),
                 Entrada = Convert.ToDateTime(line["entrada"]),
                 Intervalo = Convert.ToDateTime(line["intervalo"]),

@@ -13,11 +13,14 @@ namespace Objects
         private string nome;
         private string descricao;
         #endregion
+
         #region Propriedades
         public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         #endregion
+
+        #region Aux
         private CsFuncao CsFuncaoDataGridView(System.Data.DataRow line)
         {
             CsFuncao csFuncao = new CsFuncao
@@ -29,5 +32,6 @@ namespace Objects
             return csFuncao;
 
         }
+        #endregion
     }
 }
