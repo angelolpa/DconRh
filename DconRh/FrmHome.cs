@@ -16,5 +16,25 @@ namespace DconRh
         {
             InitializeComponent();
         }
+
+        private void cadatrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void horasExtraordináriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
