@@ -1,16 +1,16 @@
-﻿using System;
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 using System.Data;
 
 namespace DataBase
 {
     public class CsConnection
     {
-        private static string connectionString;
-        private OleDbConnection OleDbConnect = Connection();
-        
+
         #region Singleton
         public static CsConnection csConnection;
+
+        private OleDbConnection oleDbConnection = Connection();
+
         public CsConnection()
         {
 
@@ -28,24 +28,23 @@ namespace DataBase
         #region Private Method's
         private static OleDbConnection Connection()
         {
-            connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\angel\source\repos\DconRh\Database.mdb";
-            return new OleDbConnection(connectionString);
+            return new OleDbConnection(@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\LordYakefu\source\repos\angelolpa\DconRh\Database.mdb");
         }
         #endregion
 
         #region Public Method's
         public OleDbConnection GetOleDbConnection()
         {
-            return OleDbConnect;
+            return oleDbConnection;
         }
         public bool OpenConnection()
         {
-            if (!(OleDbConnect.State == ConnectionState.Open))
+            if (!(GetOleDbConnection().State == ConnectionState.Open))
             {
                 try
                 {
-                    OleDbConnect.Open();
-                    throw new Exception("Executado");
+                    oleDbConnection.Open();
+                    return true;
                 }
                 catch
                 {
@@ -59,11 +58,11 @@ namespace DataBase
         }
         public bool CloseConnection()
         {
-            if (!(OleDbConnect.State == ConnectionState.Closed))
+            if (!(oleDbConnection.State == ConnectionState.Closed))
             {
                 try
                 {
-                    OleDbConnect.Close();
+                    oleDbConnection.Close();
                     return true;
                 }
                 catch

@@ -15,7 +15,7 @@ namespace Objects
         private int fkFuncao;
         private DateTime dataAdmissao;
         private int cargaHoraria;
-        #endregion
+        #endregion  
 
         #region Propriedades
         public int Id { get => id; set => id = value; }

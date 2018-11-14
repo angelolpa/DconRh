@@ -30,16 +30,16 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadatrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horasExtraordináriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lançamentosMensalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quemSomosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,35 +67,19 @@
             this.cadatrarToolStripMenuItem.Text = "Cadastrar";
             this.cadatrarToolStripMenuItem.Click += new System.EventHandler(this.cadatrarToolStripMenuItem_Click);
             // 
-            // statusStrip1
+            // empresaToolStripMenuItem
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(117, 17);
-            this.toolStripStatusLabel1.Text = "Versão Registrada 1.0";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empresaToolStripMenuItem.Text = "Matriz/Filial";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionário";
-            // 
-            // empresaToolStripMenuItem
-            // 
-            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.empresaToolStripMenuItem.Text = "Matriz/Filial";
-            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // lançamentosToolStripMenuItem
             // 
@@ -108,7 +92,7 @@
             // horasExtraordináriasToolStripMenuItem
             // 
             this.horasExtraordináriasToolStripMenuItem.Name = "horasExtraordináriasToolStripMenuItem";
-            this.horasExtraordináriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horasExtraordináriasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.horasExtraordináriasToolStripMenuItem.Text = "Registro Diário";
             this.horasExtraordináriasToolStripMenuItem.Click += new System.EventHandler(this.horasExtraordináriasToolStripMenuItem_Click);
             // 
@@ -137,8 +121,25 @@
             // quemSomosToolStripMenuItem
             // 
             this.quemSomosToolStripMenuItem.Name = "quemSomosToolStripMenuItem";
-            this.quemSomosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quemSomosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.quemSomosToolStripMenuItem.Text = "Quem Somos?";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(117, 17);
+            this.toolStripStatusLabel1.Text = "Versão Registrada 1.0";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // FrmHome
             // 

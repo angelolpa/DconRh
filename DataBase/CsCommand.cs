@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// Utilizados
 using System.Data;
 using System.Data.OleDb;
 
@@ -16,7 +16,9 @@ namespace DataBase
         private OleDbParameterCollection oleDbParameterCollection = new OleDbCommand().Parameters;
         private OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter();
         private OleDbDataReader oleDbDataReader;
+
         private DataTable dataTable = new DataTable();
+
         public void ParameterCollection_Clear()
         {
             oleDbParameterCollection.Clear();

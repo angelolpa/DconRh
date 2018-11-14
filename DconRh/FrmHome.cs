@@ -36,5 +36,17 @@ namespace DconRh
         {
 
         }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistroFuncionario frmRegistroFuncionario = new FrmRegistroFuncionario();
+
+            frmRegistroFuncionario.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
