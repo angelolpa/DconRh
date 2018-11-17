@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CsFuncaoParametro.cs" />
     <Compile Include="CsFuncionarioParametro.cs" />
+    <Compile Include="CsPrestaServicoParametro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

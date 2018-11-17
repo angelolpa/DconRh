@@ -12,12 +12,12 @@ namespace Treatment
 {
     public class CsFuncaoParametro
     {
+        // Objetos que serão utilizados para o envio do pacote de transferência para o banco de dados.
         CsFuncao csFuncao;
         CsCollectionFuncao csCollectionFuncao;
         CsCommand csCommand;
-
+        
         #region Empacotamento de Dados
-
         public void CsFuncaoParemetroColecao(CommandType commandType, string oleDbCommand,CsFuncao csFuncao)
         {
             csCommand = new CsCommand();
@@ -52,8 +52,6 @@ namespace Treatment
 
             return csCollectionFuncao;
         }
-
-
         #endregion
 
     }
