@@ -27,7 +27,7 @@ namespace Objects
         #endregion
 
         #region Auxiliar
-        public CsFuncionario csFuncionarioDataGridView(System.Data.DataRow line)
+        public CsFuncionario CsFuncionarioDataGridView(System.Data.DataRow line)
         {
             CsFuncionario csFuncionario = new CsFuncionario
             {

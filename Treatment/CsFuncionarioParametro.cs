@@ -16,6 +16,8 @@ namespace Treatment
         public void FuncionarioParametroColecao(CommandType commandType, string oleDbCommand, CsFuncionario csFuncionario)
         {
             csCommand = new CsCommand();
+            
+            
 
             csCommand.ParameterCollection_Clear();
 
@@ -28,7 +30,6 @@ namespace Treatment
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);
         }
-
         public CsCollectionFuncionario FuncionarioParametroColecao_Returno(CommandType commandType, string oleDbCommand, string where, string name)
         {
             csFuncionario = new CsFuncionario();
@@ -46,7 +47,7 @@ namespace Treatment
 
             foreach(DataRow linha in dataTable.Rows)
             {
-                csCollectionFuncionario.Add(csFuncionario.csFuncionarioDataGridView(linha));
+                csCollectionFuncionario.Add(csFuncionario.CsFuncionarioDataGridView(linha));
             }
          
             return csCollectionFuncionario;

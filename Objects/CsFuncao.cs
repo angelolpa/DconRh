@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Objects
 {
@@ -21,9 +17,9 @@ namespace Objects
         #endregion
 
         #region Aux
-        private CsFuncao CsFuncaoDataGridView(System.Data.DataRow line)
+        public CsFuncao CsFuncaoDataGridView(System.Data.DataRow line)
         {
-            CsFuncao csFuncao = new CsFuncao
+               CsFuncao csFuncao = new CsFuncao
             {
                 Id =  Convert.ToInt32(line["id"]),
                 Nome = Convert.ToString(line["nome"]),
