@@ -99,11 +99,13 @@
             this.Controls.Add(this.TxtDescricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CsRegistroFuncao";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCON RH - Reg. Funcao";
             this.Load += new System.EventHandler(this.CsRegistroFuncao_Load);
             this.ResumeLayout(false);

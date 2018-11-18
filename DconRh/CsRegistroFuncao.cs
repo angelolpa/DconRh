@@ -31,6 +31,8 @@ namespace DconRh
         {
             CsFuncaoCommand csFuncaoCommand = new CsFuncaoCommand();
             csFuncaoCommand.InsertObjTrans(CsFuncao_Preencher());
+
+            this.DialogResult = DialogResult.Yes;
         }
 
         private CsFuncao CsFuncao_Preencher()
@@ -42,12 +44,13 @@ namespace DconRh
                     Nome = TxtNome.Text,
                     Descricao = TxtDescricao.Text
                 };
+                return csFuncao;
             }
             catch (Exception exception)
             {
                 MessageBox.Show("Houve um erro durante a transferência de dados, detalhes:" + exception.Message);
             }
-            return csFuncao;
+            return null;
         }
     }
 }

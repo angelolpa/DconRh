@@ -16,8 +16,6 @@ namespace Treatment
         public void FuncionarioParametroColecao(CommandType commandType, string oleDbCommand, CsFuncionario csFuncionario)
         {
             csCommand = new CsCommand();
-            
-            
 
             csCommand.ParameterCollection_Clear();
 
