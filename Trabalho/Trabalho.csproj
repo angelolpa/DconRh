@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CsAbstrata.cs" />
+    <Compile Include="CsFuncaoCommand.cs" />
     <Compile Include="CsFuncionarioCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

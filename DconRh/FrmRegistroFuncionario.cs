@@ -51,5 +51,30 @@ namespace DconRh
         {
             this.DialogResult = DialogResult.No;
         }
+
+        private void FrmRegistroFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtMatricula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

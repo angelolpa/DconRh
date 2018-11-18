@@ -40,13 +40,18 @@ namespace DconRh
         private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegistroFuncionario frmRegistroFuncionario = new FrmRegistroFuncionario();
-
             frmRegistroFuncionario.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void funcaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CsRegistroFuncao csRegistroFuncao = new CsRegistroFuncao();
+            csRegistroFuncao.ShowDialog();
         }
     }
 }

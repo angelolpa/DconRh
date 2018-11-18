@@ -48,6 +48,7 @@
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(121, 20);
             this.TxtNome.TabIndex = 0;
+            this.TxtNome.TextChanged += new System.EventHandler(this.TxtNome_TextChanged);
             // 
             // label1
             // 
@@ -57,6 +58,7 @@
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Funcionário:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -66,6 +68,7 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Matricula:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TxtMatricula
             // 
@@ -73,6 +76,7 @@
             this.TxtMatricula.Name = "TxtMatricula";
             this.TxtMatricula.Size = new System.Drawing.Size(100, 20);
             this.TxtMatricula.TabIndex = 3;
+            this.TxtMatricula.TextChanged += new System.EventHandler(this.TxtMatricula_TextChanged);
             // 
             // CboxFuncao
             // 
@@ -172,6 +176,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DCON RH -  Registro de Funcionário";
+            this.Load += new System.EventHandler(this.FrmRegistroFuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

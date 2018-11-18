@@ -40,6 +40,7 @@
             this.quemSomosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.funcaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,8 @@
             // 
             this.cadatrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empresaToolStripMenuItem,
-            this.funcionarioToolStripMenuItem});
+            this.funcionarioToolStripMenuItem,
+            this.funcaoToolStripMenuItem});
             this.cadatrarToolStripMenuItem.Name = "cadatrarToolStripMenuItem";
             this.cadatrarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.cadatrarToolStripMenuItem.Text = "Cadastrar";
@@ -141,6 +143,13 @@
             this.toolStripStatusLabel1.Text = "Versão Registrada 1.0";
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
+            // funcaoToolStripMenuItem
+            // 
+            this.funcaoToolStripMenuItem.Name = "funcaoToolStripMenuItem";
+            this.funcaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcaoToolStripMenuItem.Text = "Funcao";
+            this.funcaoToolStripMenuItem.Click += new System.EventHandler(this.funcaoToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,5 +188,6 @@
         private System.Windows.Forms.ToolStripMenuItem lançamentosMensalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quemSomosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcaoToolStripMenuItem;
     }
 }

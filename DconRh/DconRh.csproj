@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CsRegistroFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CsRegistroFuncao.Designer.cs">
+      <DependentUpon>CsRegistroFuncao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CsRegistroFuncao.resx">
+      <DependentUpon>CsRegistroFuncao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
