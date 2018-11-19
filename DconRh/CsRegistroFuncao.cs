@@ -32,6 +32,8 @@ namespace DconRh
             CsFuncaoCommand csFuncaoCommand = new CsFuncaoCommand();
             csFuncaoCommand.InsertObjTrans(CsFuncao_Preencher());
 
+            MessageBox.Show("Cadastro Realizado");
+
             this.DialogResult = DialogResult.Yes;
         }
 

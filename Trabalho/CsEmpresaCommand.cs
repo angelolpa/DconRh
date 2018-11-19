@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 using Objects;
 using Treatment;
 using System.Data;
-
 namespace Trabalho
 {
-    public class CsFuncaoCommand : CsAbstrata
+    public class CsEmpresaCommand : CsAbstrata
     {
-        CsFuncaoParametro csFuncaoParametro = new CsFuncaoParametro();
+        CsEmpresaParametro csEmpresaParametro = new CsEmpresaParametro();
 
         public override void InsertObjTrans(object objTrans)
         {
-            SqlCommand = "INSERT INTO funcao(nome, descricao) VALUES (@Nome, @Descricao)";
-
-            csFuncaoParametro.CsFuncaoParemetroColecao(CommandType.Text, SqlCommand, (objTrans as CsFuncao));
+            SqlCommand = "INSERT INTO empresa(nome, cnpj, telefone, endereco) VALUES (@Nome, @Cnpj, @Telefone, @Endereco)";
+            csEmpresaParametro.CsEmpresaParemetroColecao(CommandType.Text, SqlCommand, (objTrans as CsEmpresa));
         }
 
         public override void UpdateObjTrans(object objTrans)
@@ -33,14 +31,8 @@ namespace Trabalho
 
         public override void SeacherObjTrans(string where)
         {
-            SqlCommand = "SELECT * FROM funcao " + where;
+            throw new NotImplementedException();
         }
 
-        public CsCollectionFuncao SeacherNameFuncao(string where, string name)
-        {
-            SeacherObjTrans(where);
-            return csFuncaoParametro.CsFuncaoParametroColecao_Returno(CommandType.Text, SqlCommand, where, name);
-
-        }
     }
 }

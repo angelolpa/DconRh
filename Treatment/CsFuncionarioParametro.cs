@@ -19,12 +19,12 @@ namespace Treatment
 
             csCommand.ParameterCollection_Clear();
 
-            csCommand.ParameterCollection_Add("@Id", csFuncionario.Id);
             csCommand.ParameterCollection_Add("@Matricula", csFuncionario.Matricula);
             csCommand.ParameterCollection_Add("@Nome", csFuncionario.Nome);
-            csCommand.ParameterCollection_Add("@CargaHoraria", csFuncionario.CargaHoraria);
-            csCommand.ParameterCollection_Add("@DataAdmissao", csFuncionario.DataAdmissao);
             csCommand.ParameterCollection_Add("@FkFuncao", csFuncionario.FkFuncao);
+            csCommand.ParameterCollection_Add("@DataAdmissao", csFuncionario.DataAdmissao);
+            csCommand.ParameterCollection_Add("@CargaHoraria", csFuncionario.CargaHoraria);
+            csCommand.ParameterCollection_Add("@Id", csFuncionario.Id);
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);
         }

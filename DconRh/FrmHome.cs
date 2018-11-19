@@ -29,12 +29,15 @@ namespace DconRh
 
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmRegistroEmpresa frmRegistroEmpresa = new FrmRegistroEmpresa();
+            frmRegistroEmpresa.ShowDialog();
         }
 
         private void horasExtraordináriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CsRegistroPrestaServico csRegistroPrestaServico = new CsRegistroPrestaServico();
+            csRegistroPrestaServico.ShowDialog();
+            
         }
 
         private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)

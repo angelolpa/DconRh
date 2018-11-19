@@ -19,7 +19,7 @@ namespace Objects
         #region Aux
         public CsFuncao CsFuncaoDataGridView(System.Data.DataRow line)
         {
-               CsFuncao csFuncao = new CsFuncao
+             CsFuncao csFuncao = new CsFuncao
             {
                 Id =  Convert.ToInt32(line["id"]),
                 Nome = Convert.ToString(line["nome"]),

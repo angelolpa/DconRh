@@ -4,7 +4,7 @@ using DataBase;
 using Objects;
 namespace Treatment
 {
-    class CsEmpresaParametro
+    public class CsEmpresaParametro
     {
         CsEmpresa csEmpresa;
         CsCollectionEmpresa csCollectionEmpresa;
@@ -16,11 +16,11 @@ namespace Treatment
 
             csCommand.ParameterCollection_Clear();
 
-            csCommand.ParameterCollection_Add("@Id", csEmpresa.Id);
             csCommand.ParameterCollection_Add("@Nome", csEmpresa.Nome);
             csCommand.ParameterCollection_Add("@Cnpj", csEmpresa.Cnpj);
             csCommand.ParameterCollection_Add("@Telefone", csEmpresa.Telefone);
             csCommand.ParameterCollection_Add("@Endereco", csEmpresa.Endereco);
+            csCommand.ParameterCollection_Add("@Id", csEmpresa.Id);
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);
         }

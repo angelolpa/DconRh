@@ -23,8 +23,7 @@ namespace Treatment
             csCommand = new CsCommand();
 
             csCommand.ParameterCollection_Clear();
-
-            csCommand.ParameterCollection_Add("@Id", csFuncao.Id);
+            
             csCommand.ParameterCollection_Add("@Nome", csFuncao.Nome);
             csCommand.ParameterCollection_Add("@Descricao", csFuncao.Descricao);
 

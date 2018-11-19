@@ -8,24 +8,25 @@ namespace DconRh
     public partial class FrmRegistroFuncionario : Form
     {
         CsFuncionarioCommand csFuncionarioCommand;
+        CsFuncaoCommand csFuncaoCommand;
 
         public FrmRegistroFuncionario()
         {
             InitializeComponent();
+            CsFuncao_Preencher();
         }
 
         private CsFuncionario CsFuncionario_Preencher()
         {
             try
             {
-                CsFuncionario csFuncionario = new CsFuncionario
-                {
-                    Matricula = Convert.ToInt32(TxtMatricula.Text),
-                    Nome = TxtNome.Text,
-                    FkFuncao = Convert.ToInt32(CboxFuncao.Text),
-                    DataAdmissao = DtDataAdmissao.Value,
-                    CargaHoraria = Convert.ToInt32(CboxCargaHoraria.Text)
-                };
+                CsFuncionario csFuncionario = new CsFuncionario();
+                csFuncionario.Matricula = Convert.ToInt32(TxtMatricula.Text);
+                csFuncionario.Nome = TxtNome.Text;
+                csFuncionario.FkFuncao = CsFuncao_Fk_Preencher();
+                csFuncionario.DataAdmissao = Convert.ToDateTime(DtDataAdmissao.Value.ToShortDateString());
+                csFuncionario.CargaHoraria = Convert.ToInt32(CboxCargaHoraria.Text);
+                
                 return csFuncionario;
             }
             catch (Exception exception)
@@ -35,12 +36,20 @@ namespace DconRh
             return null;
         }
 
+
+        private int CsFuncao_Fk_Preencher()
+        {
+            return csFuncaoCommand.SeacherNameFuncao(" WHERE nome = @Nome ", CboxFuncao.Text)[0].Id;
+        }
+
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
             if(Int32.TryParse(TxtMatricula.Text, out int result))
             {
                 csFuncionarioCommand = new CsFuncionarioCommand();
                 csFuncionarioCommand.InsertObjTrans(CsFuncionario_Preencher());
+                MessageBox.Show("Cadastro Realizado");
+                this.DialogResult = DialogResult.No;
             }
             else
             {
@@ -52,29 +61,20 @@ namespace DconRh
             this.DialogResult = DialogResult.No;
         }
 
+        private void CsFuncao_Preencher()
+        {
+            csFuncaoCommand = new CsFuncaoCommand();
+            CsCollectionFuncao csCollectionFuncao = csFuncaoCommand.SeacherNameFuncao(null, null);
+
+            foreach (CsFuncao item in csCollectionFuncao)
+            {
+                CboxFuncao.Items.Add(item.Nome);
+            }
+        }
+
         private void FrmRegistroFuncionario_Load(object sender, EventArgs e)
         {
-
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtMatricula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
