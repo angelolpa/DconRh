@@ -18,6 +18,7 @@ namespace DconRh
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
+
         }
         
         private CsPrestaServico CsPrestaServico()
