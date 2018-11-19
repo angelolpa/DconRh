@@ -18,10 +18,15 @@ namespace DconRh
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
+            CsPrestaServicoCommand csPrestaServicoCommand = new CsPrestaServicoCommand();
+            csPrestaServicoCommand.InsertObjTrans(CsPrestaServico_Preencher());
 
+            MessageBox.Show("Cadastro realizao");
+
+            this.DialogResult = DialogResult.No;
         }
         
-        private CsPrestaServico CsPrestaServico()
+        private CsPrestaServico CsPrestaServico_Preencher()
         {
             try
             {

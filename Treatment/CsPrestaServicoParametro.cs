@@ -29,6 +29,7 @@ namespace Treatment
             csCommand.ParameterCollection_Add("@HorasTrabalhadas", csPrestaServico.HorasTrabalhadas);
             csCommand.ParameterCollection_Add("@HorasExtras", csPrestaServico.HorasExtras);
             csCommand.ParameterCollection_Add("@TotalHoras", csPrestaServico.TotalHoras);
+
             csCommand.ParameterCollection_Add("@Id", csPrestaServico.Id);
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);

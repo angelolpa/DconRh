@@ -10,12 +10,13 @@ using System.Data;
 
 namespace Trabalho
 {
-    class CsPrestaServicoCommand : CsAbstrata
+    public class CsPrestaServicoCommand : CsAbstrata
     {
         public override void InsertObjTrans(object objTrans)
         {
             CsPrestaServicoParametro csPrestaServicoParametro = new CsPrestaServicoParametro();
             SqlCommand = "INSERT INTO presta_servico(fk_empresa, fk_funcionario, data_registro, entrada, intervalo, saida, horas_trabalhadas, horas_extras, total_horas) VALUES (@FkEmpresa, @FkFuncionario, @DataDeRegistro, @Entrada, @Intervalo, @Saida, @HorasTrabalhadas, @HorasExtras, @TotalHoras) ";
+
             csPrestaServicoParametro.CsPrestaServicoParemetroColecao(CommandType.Text, SqlCommand, (objTrans as CsPrestaServico));
         }
         public override void UpdateObjTrans(object objTrans)
