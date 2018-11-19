@@ -76,8 +76,6 @@
             // 
             // CboxFuncao
             // 
-            this.CboxFuncao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CboxFuncao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CboxFuncao.FormattingEnabled = true;
             this.CboxFuncao.Items.AddRange(new object[] {
             "- - - - - - Listar Funções - - - - - -"});
