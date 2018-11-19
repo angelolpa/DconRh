@@ -36,8 +36,8 @@ namespace Objects
             CsPrestaServico csPrestaServico = new CsPrestaServico
             {
                 Id = Convert.ToInt32(line["id"]),
-                FkEmpresa = ((line["fk_empresa"]) as CsEmpresa),
-                FkFuncionario = ((line["fk_funcionario"]) as CsFuncionario),
+                FkEmpresa = (line["fk_empresa"] as CsEmpresa),
+                FkFuncionario = (line["fk_funcionario"] as CsFuncionario),
                 DataRegistro = Convert.ToDateTime(line["data_registro"]),
                 Entrada = Convert.ToDateTime(line["entrada"]),
                 Intervalo = Convert.ToDateTime(line["intervalo"]),

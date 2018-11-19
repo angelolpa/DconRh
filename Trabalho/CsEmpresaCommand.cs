@@ -31,8 +31,14 @@ namespace Trabalho
 
         public override void SeacherObjTrans(string where)
         {
-            throw new NotImplementedException();
+            SqlCommand = "SELECT * FROM empresa " + where;
         }
 
+        public CsCollectionEmpresa SeacherNameEmpresa(string where, string name)
+        {
+            SeacherObjTrans(where);
+            return csEmpresaParametro.CsEmpresaParametroColecao_Returno(CommandType.Text, SqlCommand, where, name);
+
+        }
     }
 }

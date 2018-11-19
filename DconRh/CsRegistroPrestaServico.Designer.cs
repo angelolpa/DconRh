@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.LblEmpresa = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CboxEmpresa = new System.Windows.Forms.ComboBox();
+            this.CboxFuncionario = new System.Windows.Forms.ComboBox();
+            this.DtDataRegistro = new System.Windows.Forms.DateTimePicker();
             this.LblFuncionario = new System.Windows.Forms.Label();
             this.LblEntrada = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.DtEntrada = new System.Windows.Forms.DateTimePicker();
+            this.DtIntervalo = new System.Windows.Forms.DateTimePicker();
+            this.DtSaida = new System.Windows.Forms.DateTimePicker();
             this.LblIntervalo = new System.Windows.Forms.Label();
             this.LblSaida = new System.Windows.Forms.Label();
             this.LblDataRegistro = new System.Windows.Forms.Label();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+            this.DtHExecutada = new System.Windows.Forms.DateTimePicker();
+            this.DtHoraExtra = new System.Windows.Forms.DateTimePicker();
+            this.DtTotalHoras = new System.Windows.Forms.DateTimePicker();
             this.LblTotalHora = new System.Windows.Forms.Label();
             this.LblHorasExtras = new System.Windows.Forms.Label();
             this.LblHorasTrabalhadas = new System.Windows.Forms.Label();
@@ -59,28 +59,28 @@
             this.LblEmpresa.TabIndex = 0;
             this.LblEmpresa.Text = "Empresa:";
             // 
-            // comboBox1
+            // CboxEmpresa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 3;
+            this.CboxEmpresa.FormattingEnabled = true;
+            this.CboxEmpresa.Location = new System.Drawing.Point(12, 25);
+            this.CboxEmpresa.Name = "CboxEmpresa";
+            this.CboxEmpresa.Size = new System.Drawing.Size(214, 21);
+            this.CboxEmpresa.TabIndex = 3;
             // 
-            // comboBox2
+            // CboxFuncionario
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(214, 21);
-            this.comboBox2.TabIndex = 4;
+            this.CboxFuncionario.FormattingEnabled = true;
+            this.CboxFuncionario.Location = new System.Drawing.Point(12, 65);
+            this.CboxFuncionario.Name = "CboxFuncionario";
+            this.CboxFuncionario.Size = new System.Drawing.Size(214, 21);
+            this.CboxFuncionario.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // DtDataRegistro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(217, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.DtDataRegistro.Location = new System.Drawing.Point(12, 105);
+            this.DtDataRegistro.Name = "DtDataRegistro";
+            this.DtDataRegistro.Size = new System.Drawing.Size(217, 20);
+            this.DtDataRegistro.TabIndex = 5;
             // 
             // LblFuncionario
             // 
@@ -100,41 +100,44 @@
             this.LblEntrada.TabIndex = 7;
             this.LblEntrada.Text = "Entrada:";
             // 
-            // dateTimePicker2
+            // DtEntrada
             // 
-            this.dateTimePicker2.CustomFormat = "";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(12, 144);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker2.TabIndex = 8;
-            this.dateTimePicker2.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtEntrada.CustomFormat = "";
+            this.DtEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtEntrada.Location = new System.Drawing.Point(12, 144);
+            this.DtEntrada.Name = "DtEntrada";
+            this.DtEntrada.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtEntrada.ShowUpDown = true;
+            this.DtEntrada.Size = new System.Drawing.Size(68, 20);
+            this.DtEntrada.TabIndex = 8;
+            this.DtEntrada.Value = new System.DateTime(2018, 11, 19, 7, 0, 0, 0);
+            this.DtEntrada.ValueChanged += new System.EventHandler(this.DtEntrada_ValueChanged);
             // 
-            // dateTimePicker3
+            // DtIntervalo
             // 
-            this.dateTimePicker3.CustomFormat = "";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(86, 144);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker3.ShowUpDown = true;
-            this.dateTimePicker3.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker3.TabIndex = 9;
-            this.dateTimePicker3.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtIntervalo.CustomFormat = "";
+            this.DtIntervalo.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtIntervalo.Location = new System.Drawing.Point(86, 144);
+            this.DtIntervalo.Name = "DtIntervalo";
+            this.DtIntervalo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtIntervalo.ShowUpDown = true;
+            this.DtIntervalo.Size = new System.Drawing.Size(68, 20);
+            this.DtIntervalo.TabIndex = 9;
+            this.DtIntervalo.Value = new System.DateTime(2018, 11, 19, 1, 0, 0, 0);
+            this.DtIntervalo.ValueChanged += new System.EventHandler(this.DtIntervalo_ValueChanged);
             // 
-            // dateTimePicker4
+            // DtSaida
             // 
-            this.dateTimePicker4.CustomFormat = "";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker4.Location = new System.Drawing.Point(160, 144);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker4.ShowUpDown = true;
-            this.dateTimePicker4.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker4.TabIndex = 10;
-            this.dateTimePicker4.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtSaida.CustomFormat = "";
+            this.DtSaida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtSaida.Location = new System.Drawing.Point(160, 144);
+            this.DtSaida.Name = "DtSaida";
+            this.DtSaida.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtSaida.ShowUpDown = true;
+            this.DtSaida.Size = new System.Drawing.Size(68, 20);
+            this.DtSaida.TabIndex = 10;
+            this.DtSaida.Value = new System.DateTime(2018, 11, 19, 16, 0, 0, 0);
+            this.DtSaida.ValueChanged += new System.EventHandler(this.DtSaida_ValueChanged);
             // 
             // LblIntervalo
             // 
@@ -163,44 +166,44 @@
             this.LblDataRegistro.TabIndex = 13;
             this.LblDataRegistro.Text = "Data de Registro";
             // 
-            // dateTimePicker5
+            // DtHExecutada
             // 
-            this.dateTimePicker5.CustomFormat = "";
-            this.dateTimePicker5.Enabled = false;
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker5.Location = new System.Drawing.Point(12, 183);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker5.ShowUpDown = true;
-            this.dateTimePicker5.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker5.TabIndex = 14;
-            this.dateTimePicker5.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtHExecutada.CustomFormat = "";
+            this.DtHExecutada.Enabled = false;
+            this.DtHExecutada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtHExecutada.Location = new System.Drawing.Point(12, 183);
+            this.DtHExecutada.Name = "DtHExecutada";
+            this.DtHExecutada.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtHExecutada.ShowUpDown = true;
+            this.DtHExecutada.Size = new System.Drawing.Size(68, 20);
+            this.DtHExecutada.TabIndex = 14;
+            this.DtHExecutada.Value = new System.DateTime(2018, 11, 19, 0, 0, 0, 0);
             // 
-            // dateTimePicker6
+            // DtHoraExtra
             // 
-            this.dateTimePicker6.CustomFormat = "";
-            this.dateTimePicker6.Enabled = false;
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker6.Location = new System.Drawing.Point(87, 183);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker6.ShowUpDown = true;
-            this.dateTimePicker6.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker6.TabIndex = 15;
-            this.dateTimePicker6.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtHoraExtra.CustomFormat = "";
+            this.DtHoraExtra.Enabled = false;
+            this.DtHoraExtra.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtHoraExtra.Location = new System.Drawing.Point(87, 183);
+            this.DtHoraExtra.Name = "DtHoraExtra";
+            this.DtHoraExtra.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtHoraExtra.ShowUpDown = true;
+            this.DtHoraExtra.Size = new System.Drawing.Size(68, 20);
+            this.DtHoraExtra.TabIndex = 15;
+            this.DtHoraExtra.Value = new System.DateTime(2018, 11, 19, 0, 0, 0, 0);
             // 
-            // dateTimePicker7
+            // DtTotalHoras
             // 
-            this.dateTimePicker7.CustomFormat = "";
-            this.dateTimePicker7.Enabled = false;
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker7.Location = new System.Drawing.Point(161, 183);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker7.ShowUpDown = true;
-            this.dateTimePicker7.Size = new System.Drawing.Size(68, 20);
-            this.dateTimePicker7.TabIndex = 16;
-            this.dateTimePicker7.Value = new System.DateTime(2018, 11, 19, 10, 33, 29, 0);
+            this.DtTotalHoras.CustomFormat = "";
+            this.DtTotalHoras.Enabled = false;
+            this.DtTotalHoras.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtTotalHoras.Location = new System.Drawing.Point(161, 183);
+            this.DtTotalHoras.Name = "DtTotalHoras";
+            this.DtTotalHoras.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DtTotalHoras.ShowUpDown = true;
+            this.DtTotalHoras.Size = new System.Drawing.Size(68, 20);
+            this.DtTotalHoras.TabIndex = 16;
+            this.DtTotalHoras.Value = new System.DateTime(2018, 11, 19, 0, 0, 0, 0);
             // 
             // LblTotalHora
             // 
@@ -246,6 +249,7 @@
             this.BtnRegistrar.TabIndex = 20;
             this.BtnRegistrar.Text = "Registrar";
             this.BtnRegistrar.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // CsRegistroPrestaServico
             // 
@@ -257,20 +261,20 @@
             this.Controls.Add(this.LblTotalHora);
             this.Controls.Add(this.LblHorasExtras);
             this.Controls.Add(this.LblHorasTrabalhadas);
-            this.Controls.Add(this.dateTimePicker7);
-            this.Controls.Add(this.dateTimePicker6);
-            this.Controls.Add(this.dateTimePicker5);
+            this.Controls.Add(this.DtTotalHoras);
+            this.Controls.Add(this.DtHoraExtra);
+            this.Controls.Add(this.DtHExecutada);
             this.Controls.Add(this.LblDataRegistro);
             this.Controls.Add(this.LblSaida);
             this.Controls.Add(this.LblIntervalo);
-            this.Controls.Add(this.dateTimePicker4);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.DtSaida);
+            this.Controls.Add(this.DtIntervalo);
+            this.Controls.Add(this.DtEntrada);
             this.Controls.Add(this.LblEntrada);
             this.Controls.Add(this.LblFuncionario);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.DtDataRegistro);
+            this.Controls.Add(this.CboxFuncionario);
+            this.Controls.Add(this.CboxEmpresa);
             this.Controls.Add(this.LblEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -287,20 +291,20 @@
         #endregion
 
         private System.Windows.Forms.Label LblEmpresa;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox CboxEmpresa;
+        private System.Windows.Forms.ComboBox CboxFuncionario;
+        private System.Windows.Forms.DateTimePicker DtDataRegistro;
         private System.Windows.Forms.Label LblFuncionario;
         private System.Windows.Forms.Label LblEntrada;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker DtEntrada;
+        private System.Windows.Forms.DateTimePicker DtIntervalo;
+        private System.Windows.Forms.DateTimePicker DtSaida;
         private System.Windows.Forms.Label LblIntervalo;
         private System.Windows.Forms.Label LblSaida;
         private System.Windows.Forms.Label LblDataRegistro;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
+        private System.Windows.Forms.DateTimePicker DtHExecutada;
+        private System.Windows.Forms.DateTimePicker DtHoraExtra;
+        private System.Windows.Forms.DateTimePicker DtTotalHoras;
         private System.Windows.Forms.Label LblTotalHora;
         private System.Windows.Forms.Label LblHorasExtras;
         private System.Windows.Forms.Label LblHorasTrabalhadas;

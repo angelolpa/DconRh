@@ -26,8 +26,13 @@ namespace Trabalho
         }
         public override void SeacherObjTrans(string where)
         {
-            throw new NotImplementedException();
+            SqlCommand = "SELECT * FROM funcionario " + where;
         }
-        
+        public CsCollectionFuncionario SeacherNameFuncionario(string where, string name)
+        {
+            SeacherObjTrans(where);
+            return csFuncionarioParametro.FuncionarioParametroColecao_Returno(CommandType.Text, SqlCommand, where, name);
+
+        }
     }
 }

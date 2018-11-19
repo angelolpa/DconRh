@@ -44,6 +44,7 @@
     <Compile Include="CsEmpresaCommand.cs" />
     <Compile Include="CsFuncaoCommand.cs" />
     <Compile Include="CsFuncionarioCommand.cs" />
+    <Compile Include="CsPrestaServicoCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

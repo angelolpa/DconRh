@@ -20,7 +20,6 @@ namespace Treatment
 
             csCommand.ParameterCollection_Clear();
 
-            csCommand.ParameterCollection_Add("@Id", csPrestaServico.Id);
             csCommand.ParameterCollection_Add("@FkEmpresa", csPrestaServico.FkEmpresa.Id);
             csCommand.ParameterCollection_Add("@FkFuncionario", csPrestaServico.FkFuncionario.Id);
             csCommand.ParameterCollection_Add("@DataDeRegistro", csPrestaServico.DataRegistro);
@@ -30,6 +29,7 @@ namespace Treatment
             csCommand.ParameterCollection_Add("@HorasTrabalhadas", csPrestaServico.HorasTrabalhadas);
             csCommand.ParameterCollection_Add("@HorasExtras", csPrestaServico.HorasExtras);
             csCommand.ParameterCollection_Add("@TotalHoras", csPrestaServico.TotalHoras);
+            csCommand.ParameterCollection_Add("@Id", csPrestaServico.Id);
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);
         }
