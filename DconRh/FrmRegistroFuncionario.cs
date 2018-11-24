@@ -21,12 +21,13 @@ namespace DconRh
             try
             {
                 CsFuncionario csFuncionario = new CsFuncionario();
+
                 csFuncionario.Matricula = Convert.ToInt32(TxtMatricula.Text);
                 csFuncionario.Nome = TxtNome.Text;
                 csFuncionario.FkFuncao = CsFuncao_Fk_Preencher();
                 csFuncionario.DataAdmissao = Convert.ToDateTime(DtDataAdmissao.Value.ToShortDateString());
                 csFuncionario.CargaHoraria = Convert.ToInt32(CboxCargaHoraria.Text);
-                
+
                 return csFuncionario;
             }
             catch (Exception exception)
@@ -35,8 +36,7 @@ namespace DconRh
             }
             return null;
         }
-
-
+        
         private int CsFuncao_Fk_Preencher()
         {
             return csFuncaoCommand.SeacherNameFuncao(" WHERE nome = @Nome ", CboxFuncao.Text)[0].Id;
@@ -48,7 +48,9 @@ namespace DconRh
             {
                 csFuncionarioCommand = new CsFuncionarioCommand();
                 csFuncionarioCommand.InsertObjTrans(CsFuncionario_Preencher());
+
                 MessageBox.Show("Cadastro Realizado");
+
                 this.DialogResult = DialogResult.No;
             }
             else
@@ -56,6 +58,7 @@ namespace DconRh
                 MessageBox.Show("Por favor digite somente números no campo de matricula");
             }
         }
+
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.No;

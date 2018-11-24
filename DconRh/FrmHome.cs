@@ -17,16 +17,6 @@ namespace DconRh
             InitializeComponent();
         }
 
-        private void cadatrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegistroEmpresa frmRegistroEmpresa = new FrmRegistroEmpresa();
@@ -46,15 +36,17 @@ namespace DconRh
             frmRegistroFuncionario.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void funcaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CsRegistroFuncao csRegistroFuncao = new CsRegistroFuncao();
             csRegistroFuncao.ShowDialog();
+        }
+
+        private void lançamentosMensalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relatório.Form1 form1 = new relatório.Form1();
+
+            form1.ShowDialog();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace Treatment
 
             csCommand.ExecuteCommandNonQuery(commandType, oleDbCommand);
         }
+
         public CsCollectionPrestaServico CsPrestaServicoParametroColecao_Returno(CommandType commandType, string oleDbCommand, string where, string name)
         {
             csPrestaServico = new CsPrestaServico();

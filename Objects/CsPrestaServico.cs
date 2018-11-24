@@ -15,6 +15,9 @@ namespace Objects
         private DateTime horasTrabalhadas;
         private DateTime horasExtras;
         private DateTime totalHoras;
+        //Aux²
+        private string empresaNome;
+        private string funcionarioNome;
         #endregion
 
         #region Propriedades
@@ -28,6 +31,9 @@ namespace Objects
         public DateTime HorasTrabalhadas { get => horasTrabalhadas; set => horasTrabalhadas = value; }
         public DateTime HorasExtras { get => horasExtras; set => horasExtras = value; }
         public DateTime TotalHoras { get => totalHoras; set => totalHoras = value; }
+        //
+        public string EmpresaNome { get => empresaNome; set => empresaNome = value; }
+        public string FuncionarioNome { get => funcionarioNome; set => funcionarioNome = value; }
         #endregion
 
         #region Auxiliar
@@ -44,9 +50,11 @@ namespace Objects
                 Saida = Convert.ToDateTime(line["saida"]),
                 HorasTrabalhadas = Convert.ToDateTime(line["horas_trabalhadas"]),
                 HorasExtras = Convert.ToDateTime(line["horas_extras"]),
-                TotalHoras = Convert.ToDateTime(line["total_horas"])
-            };
+                TotalHoras = Convert.ToDateTime(line["total_horas"]),
 
+                EmpresaNome = Convert.ToString(line["empresa.nome"]),
+                FuncionarioNome = Convert.ToString(line["funcionario.nome"])
+            };
             return csPrestaServico;
         }
 

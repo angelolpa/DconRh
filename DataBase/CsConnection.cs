@@ -28,7 +28,7 @@ namespace DataBase
         #region Private Method's
         private static OleDbConnection Connection()
         {
-            return new OleDbConnection(@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\LordYakefu\source\repos\angelolpa\DconRh\Database.mdb");
+            return new OleDbConnection(@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source =|DataDirectory|\Database.mdb");
         }
         #endregion
 

@@ -34,7 +34,8 @@ namespace DconRh
                 {
                     FkEmpresa = CsEmpresa_Fk_Preencher(),
                     FkFuncionario = CsFuncionario_Fk_Preencher(),
-                    DataRegistro = DtDataRegistro.Value,
+
+                    DataRegistro = Convert.ToDateTime(DtDataRegistro.Text),
                     Entrada = Convert.ToDateTime(DtEntrada.Value.TimeOfDay.ToString()),
                     Intervalo = Convert.ToDateTime(DtIntervalo.Value.TimeOfDay.ToString()),
                     Saida = Convert.ToDateTime(DtSaida.Value.TimeOfDay.ToString()),
@@ -42,6 +43,8 @@ namespace DconRh
                     HorasExtras = Convert.ToDateTime(DtHoraExtra.Value.TimeOfDay.ToString()),
                     TotalHoras = Convert.ToDateTime(DtIntervalo.Value.TimeOfDay.ToString())
                 };
+
+                MessageBox.Show("" + Convert.ToDateTime(DtIntervalo.Value.TimeOfDay.ToString()) +" HorasExtras  =" + Convert.ToDateTime(DtHoraExtra.Value.TimeOfDay.ToString()));
                 return csPrestaServico;
             }
             catch(Exception exception)

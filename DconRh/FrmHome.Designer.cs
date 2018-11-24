@@ -32,6 +32,7 @@
             this.cadatrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horasExtraordináriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@
             this.quemSomosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.funcaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,21 +67,27 @@
             this.cadatrarToolStripMenuItem.Name = "cadatrarToolStripMenuItem";
             this.cadatrarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.cadatrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadatrarToolStripMenuItem.Click += new System.EventHandler(this.cadatrarToolStripMenuItem_Click);
             // 
             // empresaToolStripMenuItem
             // 
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.empresaToolStripMenuItem.Text = "Matriz/Filial";
             this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionário";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
+            // 
+            // funcaoToolStripMenuItem
+            // 
+            this.funcaoToolStripMenuItem.Name = "funcaoToolStripMenuItem";
+            this.funcaoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.funcaoToolStripMenuItem.Text = "Funcao";
+            this.funcaoToolStripMenuItem.Click += new System.EventHandler(this.funcaoToolStripMenuItem_Click);
             // 
             // lançamentosToolStripMenuItem
             // 
@@ -111,6 +117,7 @@
             this.lançamentosMensalToolStripMenuItem.Name = "lançamentosMensalToolStripMenuItem";
             this.lançamentosMensalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.lançamentosMensalToolStripMenuItem.Text = "Lançamentos Mensal";
+            this.lançamentosMensalToolStripMenuItem.Click += new System.EventHandler(this.lançamentosMensalToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -141,14 +148,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(117, 17);
             this.toolStripStatusLabel1.Text = "Versão Registrada 1.0";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-            // funcaoToolStripMenuItem
-            // 
-            this.funcaoToolStripMenuItem.Name = "funcaoToolStripMenuItem";
-            this.funcaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.funcaoToolStripMenuItem.Text = "Funcao";
-            this.funcaoToolStripMenuItem.Click += new System.EventHandler(this.funcaoToolStripMenuItem_Click);
             // 
             // FrmHome
             // 

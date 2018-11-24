@@ -12,9 +12,10 @@ namespace Trabalho
 {
     public class CsPrestaServicoCommand : CsAbstrata
     {
+        CsPrestaServicoParametro csPrestaServicoParametro = new CsPrestaServicoParametro();
+
         public override void InsertObjTrans(object objTrans)
         {
-            CsPrestaServicoParametro csPrestaServicoParametro = new CsPrestaServicoParametro();
             SqlCommand = "INSERT INTO presta_servico(fk_empresa, fk_funcionario, data_registro, entrada, intervalo, saida, horas_trabalhadas, horas_extras, total_horas) VALUES (@FkEmpresa, @FkFuncionario, @DataDeRegistro, @Entrada, @Intervalo, @Saida, @HorasTrabalhadas, @HorasExtras, @TotalHoras) ";
 
             csPrestaServicoParametro.CsPrestaServicoParemetroColecao(CommandType.Text, SqlCommand, (objTrans as CsPrestaServico));
@@ -29,7 +30,12 @@ namespace Trabalho
         }
         public override void SeacherObjTrans(string where)
         {
-            throw new NotImplementedException();
+            SqlCommand = "SELECT presta_servico.id, fk_empresa, fk_funcionario, data_registro, entrada, intervalo, saida, horas_trabalhadas, horas_extras, total_horas, empresa.nome, funcionario.nome FROM((presta_servico INNER JOIN empresa ON empresa.id = presta_servico.fk_empresa) INNER JOIN funcionario ON funcionario.id = presta_servico.fk_funcionario)";
+        }   
+        public CsCollectionPrestaServico SeacherNameFuncionario(string where, string name)
+        {
+            SeacherObjTrans(where);
+            return csPrestaServicoParametro.CsPrestaServicoParametroColecao_Returno(CommandType.Text, SqlCommand, where, name);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace Trabalho
         {
             SeacherObjTrans(where);
             return csFuncionarioParametro.FuncionarioParametroColecao_Returno(CommandType.Text, SqlCommand, where, name);
-
         }
     }
 }
