@@ -12,7 +12,7 @@ namespace Trabalho
 
         public override void InsertObjTrans(object objTrans)
         {
-            SqlCommand = "INSERT INTO funcionario(matricula, nome, fk_funcao, data_admissao, carga_horaria) VALUES (@Matricula, @Nome, @FkFuncao, @DataAdmissao, @CargaHoraria)";
+            SqlCommand = "INSERT INTO funcionario(matricula, nome, fk_funcao, data_admissao, carga_horaria) VALUES (@Matricula, @Nome, @FkFuncao, @DataAdmissao, @CargaHoraria) ";
 
             csFuncionarioParametro.FuncionarioParametroColecao(CommandType.Text, SqlCommand, (objTrans as CsFuncionario));
         }
